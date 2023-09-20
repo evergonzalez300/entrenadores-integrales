@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar-123 {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+
+        .navbar-123 li {
+            margin: 0 15px;
+        }
+
+        .navbar-123 li a {
+            color: white;
+        }
+
+        .contenedor-quesomos-123 {
+            width: 100%;
+            min-height: calc(100vh - 50px);
+            background-color: rgba(128, 128, 128, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedor-mision-123 {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .contenedor-mision-123 p {
+            font-size: 20px;
+            text-align: justify;
+            padding: 15px;
+        }
+
+        .contenedor-vision-123 {
+            max-width: 600px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .contenedor-vision-123 p {
+            font-size: 20px;
+            text-align: justify;
+            padding: 15px;
+        }
+
+        .menu-movil-123 {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .menu-movil-123 {
+                display: block;
+            }
+
+            .navbar-123 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+            }
+
+            .menu-movil-123 {
+                display: block;
+                height: 50px;
+                margin-left: 0;
+                margin-right: auto;
+                border: none;
+                outline: none;
+            }
+
+            .navbar-123 li {
+                width: 100%;
+                min-height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .navbar-123 li:hover {
+                background-color: blueviolet;
+            }
+
+            .navbar-123 li a {
+                width: 100%;
+                color: white;
+                min-height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+
+            .inactive {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="menu-movil-123">
+            <img src="imagenes/icono-menu.png" alt="">
+        </button>
+        <ul class="navbar-123 inactive">
+            <li><a href="index.html">¿Qué somos?</a></li>
+            <li><a href="grupos.html">Grupos</a></li>
+            <li><a href="material-estudio.html">Material de estudio</a></li>
+            <li><a href="experiencias.html">Experiencias</a></li>
+        </ul>
+    </nav>
+    <div class="contenedor-quesomos-123">
+        <div class="contenedor-mision-123">
+            <h2>Misión</h2>
+            <p>Entrenadores de cálculo integral es un programa de acompañamiento colaborativo que tiene como propósito el logro de un aprendizaje significativo del cálculo integral que permita la motivación, el trabajo en equipo y el desarrollo de conexiones valiosas en el proceso de formación de los estudiantes de la Facultad de Minas.</p>
+        </div>
+        <div class="contenedor-vision-123">
+            <h2>Visión</h2>
+            <p>Para el año 2032, el programa de entrenadores de cálculo integral será una estrategia que acompañe y motive el aprendizaje significativo del cálculo integral de todos los estudiantes de la Facultad de Minas, con indicadores de desempeño superiores al 80%.</p>
+        </div>
+    </div>
+
+    <script>
+        const menuMovil123 = document.querySelector('.menu-movil-123');
+        const navbar123 = document.querySelector('.navbar-123');
+
+        menuMovil123.addEventListener('click', function() {
+            navbar123.classList.toggle('inactive');
+        })
+    </script>
+</body>
+</html>

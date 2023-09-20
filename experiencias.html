@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar-123 {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+
+        .navbar-123 li {
+            margin: 0 15px;
+        }
+
+        .navbar-123 li a {
+            color: white;
+        }
+
+        .section-123 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .section-123 div {
+            
+            max-width: 900px;
+            margin: 10px;
+        }
+
+        .section-123 div img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .menu-movil-123 {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .menu-movil-123 {
+                display: block;
+            }
+
+            .navbar-123 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+            }
+
+            .menu-movil-123 {
+                display: block;
+                height: 50px;
+                margin-left: 0;
+                margin-right: auto;
+                border: none;
+                outline: none;
+            }
+
+            .navbar-123 li {
+                width: 100%;
+                min-height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .navbar-123 li:hover {
+                background-color: blueviolet;
+            }
+
+            .navbar-123 li a {
+                width: 100%;
+                color: white;
+                min-height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+
+            .inactive {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="menu-movil-123">
+            <img src="imagenes/icono-menu.png" alt="">
+        </button>
+        <ul class="navbar-123 inactive">
+            <li><a href="index.html">¿Qué somos?</a></li>
+            <li><a href="grupos.html">Grupos</a></li>
+            <li><a href="material-estudio.html">Material de estudio</a></li>
+            <li><a href="experiencias.html">Experiencias</a></li>
+        </ul>
+    </nav>
+    <section class="section-123">
+        <div>
+            <img src="imagenes/Foto-1.jpg" alt="">
+        </div>
+        <div>
+            <img src="imagenes/Foto-2.jpg" alt="">
+        </div>
+        <div>
+            <img src="imagenes/Foto-3.jpg" alt="">
+        </div>
+        <div>
+            <img src="imagenes/Foto-4.jpg" alt="">
+        </div>
+        <div>
+            <img src="imagenes/Foto-5.jpg" alt="">
+        </div>
+        <div>
+            <img src="imagenes/Foto-6.jpg" alt="">
+        </div>
+    </section>
+
+    <script>
+        const menuMovil123 = document.querySelector('.menu-movil-123');
+        const navbar123 = document.querySelector('.navbar-123');
+
+        menuMovil123.addEventListener('click', function() {
+            navbar123.classList.toggle('inactive');
+        })
+    </script>
+</body>
+</html>

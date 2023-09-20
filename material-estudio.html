@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar-123 {
+            background-color: rgba(0, 0, 0, 0.55);
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+
+        .navbar-123 li {
+            margin: 0 15px;
+        }
+
+        .navbar-123 li a {
+            color: white;
+        }
+
+        .Material-estudio-123 {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 300px;
+        }
+
+        .Material-estudio-123 ul {
+            display: flex;
+        }
+
+        .Material-estudio-123 ul:nth-child(1) {
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 100%;
+        }
+
+        .Material-estudio-123 ul:nth-child(2) {
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Material-estudio-123 ul li {
+            margin: 0 50px;
+            min-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .Material-estudio-123 ul li button {
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .resumenes-123 {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .resumenes-123 div {
+            height: 250px;
+            width: 250px;
+            margin: 10px;     
+            display: flex;
+            flex-direction: column;
+            align-items: center;   
+            text-align: center;
+            position: relative;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: rgba(128, 128, 128, 0.5);
+        }
+
+        .resumenes-123 div h2 {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .resumenes-123 div button {
+            width: 150px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .videos-ejercicios-123 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .videos-ejercicios-123 div {
+            height: 250px;
+            width: 250px;
+            margin: 10px;   
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-movil-123 {
+            display: none;
+        }
+
+        .inactivo {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .menu-movil-123 {
+                display: block;
+            }
+
+            .navbar-123 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+            }
+
+            .menu-movil-123 {
+                display: block;
+                height: 50px;
+                margin-left: 0;
+                margin-right: auto;
+                border: none;
+                outline: none;
+            }
+
+            .navbar-123 li {
+                width: 100%;
+                min-height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .navbar-123 li:hover {
+                background-color: blueviolet;
+            }
+
+            .navbar-123 li a {
+                width: 100%;
+                color: white;
+                min-height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+
+            .Material-estudio-123 ul:nth-child(1) {
+                background-color: aqua;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                width: 100%;
+            }
+
+            .Material-estudio-123 ul li {
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                text-align: center;
+            }
+
+            .Material-estudio-123 ul:nth-child(2) {
+                background-color: red;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .inactive {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="menu-movil-123">
+            <img src="imagenes/icono-menu.png" alt="">
+        </button>
+        <ul class="navbar-123 inactive">
+            <li><a href="index.html">¿Qué somos?</a></li>
+            <li><a href="grupos.html">Grupos</a></li>
+            <li><a href="material-estudio.html">Material de estudio</a></li>
+            <li><a href="experiencias.html">Experiencias</a></li>
+        </ul>
+        <nav class="Material-estudio-123">
+            <ul>
+                <li class="resumen-parcial-uno-123"><button>Resumen parcial uno</button></li>
+                <li class="resumen-parcial-dos-123"><button>Resumen parcial dos</button></li>
+                <li class="resumen-parcial-tres-123"><button>Resumen parcial tres</button></li>
+            </ul>
+            <ul>
+                <li><button class="videos-ejercicios-uno-123">Videos de ejercicios resueltos parcial uno</button></li>
+                <li><button class="videos-ejercicios-dos-123">Videos de ejercicios resueltos parcial dos</button></li>
+                <li><button class="videos-ejercicios-tres-123">Videos de ejercicios resueltos parcial tres</button></li>
+            </ul>
+        </nav>
+    </nav>
+    <div class="resumenes-123 parcial-uno-123">
+        <div>
+            <h2>Notación</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>El problema del área</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Integral definida</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Antiderivadas</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Teorema fundamental del cálculo</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Regla de sustitución</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Integración por partes</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Sustitución trigonométrica</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Fracciones parciales</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Integrales impropias</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Notación</h2>
+            <button>PDF</button>
+        </div>
+    </div>
+    <div class="resumenes-123 parcial-dos-123 inactivo">
+        <div>
+            <h2>Área entre curvas</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Volúmenes</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Volúmenes mediante cascarones cilíndricos</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Curvas definidas por ecuaciones paramétricas</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Cálculo con curvas paramétricas</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Coordenadas polares</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Áreas y longitudes en coordenadas polares</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Trabajo mecánico</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Aplicaciones a la física y a la ingeniería</h2>
+            <button>PDF</button>
+        </div>
+    </div>
+    <div class="resumenes-123 parcial-tres-123 inactivo">
+        <div>
+            <h2>Sucesiones</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Series</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Prueba de la integral</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Pruebas de convergencia</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Pruebas por comparación</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Series alternantes</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Convergencia absoluta y las pruebas de la razón y de la raíz</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Series de potencias</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Representación de funciones como series de potencias</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Series de maclaurin y de taylor</h2>
+            <button>PDF</button>
+        </div>
+        <div>
+            <h2>Aplicaciones de los polinomios de taylor</h2>
+            <button>PDF</button>
+        </div>
+    </div>
+    <div class="videos-ejercicios-123 ejercicios-resueltos-uno inactivo">
+        <div>Taller 1</div>
+        <div>Taller 2</div>
+        <div>Taller 3</div>
+        <div>Taller 4</div>
+    </div>
+    <div class="videos-ejercicios-123 ejercicios-resueltos-dos inactivo">
+        <div>Taller 5</div>
+        <div>Taller 6</div>
+        <div>Taller 7</div>
+        <div>Taller 8</div>
+    </div>
+    <div class="videos-ejercicios-123 ejercicios-resueltos-tres inactivo">
+        <div>Taller 9</div>
+        <div>Taller 10</div>
+        <div>Taller 11</div>
+        <div>Taller 12</div>
+    </div>
+
+
+    <script>
+        const menuMovil123 = document.querySelector('.menu-movil-123');
+        const navbar123 = document.querySelector('.navbar-123');
+        const resumenParcialUno = document.querySelector('.resumen-parcial-uno-123');
+        const parcialUno123 = document.querySelector('.parcial-uno-123');
+        const resumenParcialDos = document.querySelector('.resumen-parcial-dos-123');
+        const parcialDos123 = document.querySelector('.parcial-dos-123');
+        const resumenParcialTres = document.querySelector('.resumen-parcial-tres-123');
+        const parcialTres123 = document.querySelector('.parcial-tres-123');
+        const videosEjerciciosUno = document.querySelector('.videos-ejercicios-uno-123');
+        const ejerciciosResueltosUno = document.querySelector('.ejercicios-resueltos-uno');
+        const videosEjerciciosDos = document.querySelector('.videos-ejercicios-dos-123');
+        const ejerciciosResueltosDos = document.querySelector('.ejercicios-resueltos-dos');
+        const videosEjerciciosTres = document.querySelector('.videos-ejercicios-tres-123');
+        const ejerciciosResueltosTres = document.querySelector('.ejercicios-resueltos-tres');
+
+
+        menuMovil123.addEventListener('click', function() {
+            navbar123.classList.toggle('inactive');
+        })
+
+        resumenParcialUno.addEventListener('click', function() {
+            parcialUno123.classList.remove('inactivo');
+
+            if (!parcialUno123.classList.contains('inactivo')) {
+                parcialDos123.classList.add('inactivo');
+                parcialTres123.classList.add('inactivo');
+                ejerciciosResueltosUno.classList.add('inactivo');
+                ejerciciosResueltosDos.classList.add('inactivo');
+                ejerciciosResueltosTres.classList.add('inactivo');
+            }
+        })
+
+        resumenParcialDos.addEventListener('click', function() {
+            parcialDos123.classList.remove('inactivo');
+
+            if (!parcialDos123.classList.contains('inactivo')) {
+                parcialUno123.classList.add('inactivo');
+                parcialTres123.classList.add('inactivo');
+                ejerciciosResueltosUno.classList.add('inactivo');
+                ejerciciosResueltosDos.classList.add('inactivo');
+                ejerciciosResueltosTres.classList.add('inactivo');
+            }
+        })
+
+        resumenParcialTres.addEventListener('click', function() {
+            parcialTres123.classList.remove('inactivo');
+
+            if (!parcialTres123.classList.contains('inactivo')) {
+                parcialUno123.classList.add('inactivo');
+                parcialDos123.classList.add('inactivo');
+                ejerciciosResueltosUno.classList.add('inactivo');
+                ejerciciosResueltosDos.classList.add('inactivo');
+                ejerciciosResueltosTres.classList.add('inactivo');
+            }
+        })
+
+        videosEjerciciosUno.addEventListener('click', function() {
+            ejerciciosResueltosUno.classList.remove('inactivo');
+
+            if (!ejerciciosResueltosUno.classList.contains('inactivo')) {
+                parcialUno123.classList.add('inactivo');
+                parcialDos123.classList.add('inactivo');
+                parcialTres123.classList.add('inactivo');
+                ejerciciosResueltosDos.classList.add('inactivo');
+                ejerciciosResueltosTres.classList.add('inactivo');
+            }
+        })
+
+        videosEjerciciosDos.addEventListener('click', function() {
+            ejerciciosResueltosDos.classList.remove('inactivo');
+
+            if (!ejerciciosResueltosDos.classList.contains('inactivo')) {
+                parcialUno123.classList.add('inactivo');
+                parcialDos123.classList.add('inactivo');
+                parcialTres123.classList.add('inactivo');
+                ejerciciosResueltosUno.classList.add('inactivo');
+                ejerciciosResueltosTres.classList.add('inactivo');
+            }
+        })
+
+        videosEjerciciosTres.addEventListener('click', function() {
+            ejerciciosResueltosTres.classList.remove('inactivo');
+
+            if (!ejerciciosResueltosTres.classList.contains('inactivo')) {
+                parcialUno123.classList.add('inactivo');
+                parcialDos123.classList.add('inactivo');
+                parcialTres123.classList.add('inactivo');
+                ejerciciosResueltosUno.classList.add('inactivo');
+                ejerciciosResueltosDos.classList.add('inactivo');
+            }
+        })
+    </script>
+</body>
+</html>
